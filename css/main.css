@@ -1,8 +1,19 @@
+.navbar{
+    width: 100%;
+    background-color: lightgreen;
+}
+
 .jumbotron{
-    background-color: aqua;
+    background-color: white;
     text-align: center;
 }
 
-.card{
-    background-color: lightblue;
+.button{
+    background-color: lightgreen;
 }
+
+.col-2{
+    margin-left: 200px;
+    float: left;
+}
+

@@ -13,9 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    
+    <!-- JavaScript code -->
     <script src="js/data.js"></script>
-    <script src="js/index.js"></script>
 
     <title>Alexia Cahi, Term 2 project</title>
 
@@ -36,6 +35,9 @@
             <li class="nav-item">
               <a class="nav-link" href="pages/build.html">Build  <span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/checkout.html">Checkout</a>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -47,9 +49,6 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="pages/checkout.html">Checkout</a>
-            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -58,49 +57,63 @@
         </div>
       </nav>
 
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">SALLYS SUBS</h1>
-          <p class="lead">Build your own sub!</p>
-        </div>
-      </div>
+      <div class="jumbotron jumbotron-fluid" style="background-color: lightgreen;">
+          <div class="container">
+            <h1 class="display-4"><b>SALLYS SUBS</b></h1>
+            <p class="lead"><b>Build your own sub!</b></p>
+          </div>
       
+    <div class="container">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body" style="width: 50%">
           <form>
-            <h4>Your details:</h4>
+            <h4>Create an account:</h4>
             <div class="form-group">
               <label for="formGroupExampleInput">Name:</label>
               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput">Surname:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Surname">
+              <label for="formGroupExampleInput">Username:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
             </div>
             <div class="form-group">
-              <label for="formGroupExampleInput2">Name of sub:</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Name of sub">
+              <label for="formGroupExampleInput2">Password:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
             </div>
+            <a href="pages/build.html" class="btn btn-primary">Create account</a>
           </form>
         </div>
       </div>
     </div>
 
+  <div class="container">
+    <div class="card">
+      <div class="card-body" style=" background-color: lightgreen;">
+        <form>
+          <h4>Create your Sub!</h4>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Name of Sub:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+          </div>
+        </form>
+      </div>
+    </div>
+
       <h4>Choose your bread:</h4>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" datacost="25" checked>
         <label class="form-check-label" for="exampleRadios1">
           Sourdough Bread
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" datacost="25">
         <label class="form-check-label" for="exampleRadios2">
           Ciabatta
         </label>
       </div>
-      <div class="form-check disabled">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option3" datacost="30">
         <label class="form-check-label" for="exampleRadios3">
           French Baguette
         </label>
@@ -108,102 +121,107 @@
 
       <h4>Choose your size:</h4>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" datacost="10">
         <label class="form-check-label" for="inlineCheckbox1">Full sub</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" datacost="5">
         <label class="form-check-label" for="inlineCheckbox2">Half sub</label>
       </div>
 
       <h4>Choose your protein:</h4>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" datacost="10">
         <label class="form-check-label" for="inlineCheckbox1">Chicken</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" datacost="8">
         <label class="form-check-label" for="inlineCheckbox2">Bacon</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Pulled Pork</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3" datacost="8">
+        <label class="form-check-label" for="inlineCheckbox2">Pulled Pork</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Steak</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" datacost="12">
+        <label class="form-check-label" for="inlineCheckbox2">Steak</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Ham</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5" datacost="6">
+        <label class="form-check-label" for="inlineCheckbox2">Ham</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Pepperoni</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6" datacost="5">
+        <label class="form-check-label" for="inlineCheckbox2">Pepperoni</label>
       </div>
-
+      
       <h4>Choose your toppings:</h4>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" datacost="5">
         <label class="form-check-label" for="inlineCheckbox1">Avo</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" datacost="3">
         <label class="form-check-label" for="inlineCheckbox2">Lettuce</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Tomato</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3" datacost="7">
+        <label class="form-check-label" for="inlineCheckbox2">Tomato</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Cheese</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" datacost="9">
+        <label class="form-check-label" for="inlineCheckbox2">Cheese</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Spinach</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5" datacost="2">
+        <label class="form-check-label" for="inlineCheckbox2">Spinach</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Pickles</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option6" datacost="7">
+        <label class="form-check-label" for="inlineCheckbox2">Pickles</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Cucumber</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option7" datacost="4">
+        <label class="form-check-label" for="inlineCheckbox2">Onions</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Onions</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option8" datacost="5">
+        <label class="form-check-label" for="inlineCheckbox2">Cucumber</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Peppers</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option9" datacost="3">
+        <label class="form-check-label" for="inlineCheckbox2">Peppers</label>
       </div>
 
       <h4>Choose your sauce:</h4>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" datacost="3">
         <label class="form-check-label" for="inlineCheckbox1">Mayo</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" datacost="3">
         <label class="form-check-label" for="inlineCheckbox2">Mustard</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Guacamole</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3" datacost="9">
+        <label class="form-check-label" for="inlineCheckbox2">Guacamole</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Hummus</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option4" datacost="12">
+        <label class="form-check-label" for="inlineCheckbox2">Hummus</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-        <label class="form-check-label" for="inlineCheckbox3">Butter</label>
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5" datacost="2">
+        <label class="form-check-label" for="inlineCheckbox2">Butter</label>
+      </div>
+    
+
+      <div class="output">
+        <div class="outHeader">
+          <div class="totalOrder"><h3 id="orderTotal"></h3></div>
+        </div>
       </div>
 
-      <div class="right">
-        <div class="orderCost" id="realTimeCost">R0.00</div>
-      </div>
-
+      <a href="pages/checkout.html" class="btn btn-primary">Checkout</a>
+    </div>
   </body>
